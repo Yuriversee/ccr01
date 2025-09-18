@@ -2,7 +2,7 @@ import socket
 import threading
 from datetime import datetime
 
-LISTENER_PORT = 99
+LISTENER_PORT = 6000
 
 # devices: dict keyed by imei -> { lat, lon, speed, course, timestamp, last_seen, addr }
 devices = {}
@@ -111,4 +111,5 @@ def get_device(imei):
         return devices.get(imei)
 
 if __name__ == "__main__":
+
     run_listener()
